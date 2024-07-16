@@ -6,10 +6,8 @@ export default function PublicLayout({
     children: React.ReactNode
   }) {
     return (
-        <div className="container-md">
-            <main>
-                {children}
-            </main>
+        <div className="d-flex flex-column w-100">
+            {children}
             <Footer />
         </div>
     )

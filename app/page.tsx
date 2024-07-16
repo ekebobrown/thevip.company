@@ -20,7 +20,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.main} >
+    <main className={`${styles.main} p-5`} >
       <div className="mb-3">
         <Image
           className={styles.logo}
@@ -32,16 +32,16 @@ export default function Home() {
         />
       </div>
       <div className="d-flex flex-column align-items-center">
-        <span className="fw-bolder text-center fs-6 mb-5 px-3">We are working on something magnificient and we will like you to be the first to experience it. Submit your e-mail so we can reserve you a seat in the front row.</span>
+        <span className="fw-medium text-center fs-6 mb-5">We are working on something magnificient and we will like you to be the first to experience it. Submit your e-mail so we can reserve you a seat in the front row.</span>
         <Newsletter/>
-        <div className="d-flex flex-row mt-3 gap-2 justify-content-center">
-          <em className="align-middle">Follow us:</em>
-          <Link href="/#" className="text-reset"><i className="fa-brands fa-facebook fs-4"></i></Link>
-          <Link href="/#" className="text-reset"><i className="fa-brands fa-twitter fs-4"></i></Link>
-          <Link href="/#" className="text-reset"><i className="fa-brands fa-linkedin fs-4"></i></Link>
-        </div>
       </div>
-      <div className="d-flex flex-row justify-content-center gap-1">Powered by <Image src="/vercel.svg" width={60} height={20} alt="Vercel Logo"/></div>
+      <div className="d-flex flex-row mt-3 gap-2 justify-content-center">
+        <em className="align-middle">Follow us:</em>
+        <Link href="/#" className="text-reset"><i className="fa-brands fa-facebook fs-4"></i></Link>
+        <Link href="/#" className="text-reset"><i className="fa-brands fa-twitter fs-4"></i></Link>
+        <Link href="/#" className="text-reset"><i className="fa-brands fa-linkedin fs-4"></i></Link>
+      </div>
+      {/*<div className="d-flex flex-row justify-content-center gap-1">Powered by <Image src="/vercel.svg" width={60} height={20} alt="Vercel Logo"/></div>*/}
     </main>
   );
 }

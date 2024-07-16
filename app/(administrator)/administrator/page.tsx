@@ -1,9 +1,10 @@
+import React from 'react'
 import styles from '../../page.module.css'
 
-export default function Index(){
+export default function Administrator(){
   return (
     <main className={styles.main} >
-        <div>Beta Testing</div>
+      <div>Administrative Area</div>
     </main>
   )
 }
