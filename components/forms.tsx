@@ -69,7 +69,7 @@ export function Newsletter() {
     }
     return (
         <div id="subscribe" className="d-flex flex-column align-items-center w-100">
-            <form name="newlestter" className="d-flex flex-row w-100 justify-content-center" onSubmit={handleSubmit}>
+            <form name="newlestter" className="d-flex flex-column flex-md-row w-100 justify-content-center" onSubmit={handleSubmit}>
                 <input type="email" id="email" name="email" className="py-2 px-3 border-0 bg-dark-subtle text-dark" value = {email} onChange={(e)=>setEmail(e.target.value)} placeholder="E-mail Address" required />
                 <button type="submit" id="subscribebutton" className="btn btn-dark py-2 px-3 rounded-0 text-nowrap">Get Notified</button>
             </form>
