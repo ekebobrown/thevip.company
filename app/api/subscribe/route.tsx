@@ -25,7 +25,7 @@ try {
         html: `<div style="font-family: 'ubuntu', 'verdana'; font-size: 18px">
                     <header style="display: flex; flex-direction: row; background-color: #0F0F0F; color: #FFFFFF; padding: 8px 10px; border-radius: 4px 4px 0 0">Notification</header>
                     <div style="background-color: #F6F6F6; padding: 10px; line-height: 1.5rem; border-radius: 0 0 4px 4px; font-size: 12px">
-                        <span>This is a notification that ${email} has been successfully added to the waiting list. Have a nice day.</span> 
+                        <span>This is a notification that ${email} has been successfully added to our mailing list. Have a nice day.</span> 
                         <br />
                         <br />
                         <strong>Your ViP</strong>
