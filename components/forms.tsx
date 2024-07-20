@@ -10,11 +10,14 @@ export function Newsletter() {
         subscribebutton!.innerHTML = "Please Wait <i class='fa-solid fa-circle-notch fa-spin'></i>"
 
         const emailinput = document.getElementById("email") as HTMLInputElement
+        const submitbutton = document.getElementsByTagName("button") as unknown as HTMLButtonElement
         emailinput!.disabled = true
+        submitbutton!.disabled = true
 
         const message = document.createElement("em");
-        message.setAttribute("id", "message");
+        message.setAttribute("id", "message")
         message.style.color="red"
+        message.style.fontSize="0.8rem"
 
         try {
             const response = await fetch("/api/subscribe", {
@@ -42,7 +45,7 @@ export function Newsletter() {
                 )
             } else if (data?.success == false) {
                 if (data.Error.responseCode == 550) {
-                    const textnode = document.createTextNode("Invalid email or nonexistent domain. Please try again.");
+                    const textnode = document.createTextNode("Invalid email or nonexistent domain. Please confirm try again.");
                     message.appendChild(textnode);
                 } else {
                     const textnode = document.createTextNode("Subscription unsuccessful, please try again.");
@@ -60,7 +63,7 @@ export function Newsletter() {
                     subscribebutton!.classList.remove("btn-danger")
                     subscribebutton!.classList.add("btn-dark")
                     emailinput!.disabled = false
-                    }, 5000
+                    }, 10000
                 )
             }
           } catch(error) {
@@ -70,8 +73,8 @@ export function Newsletter() {
     return (
         <div id="subscribe" className="d-flex flex-column align-items-center w-100">
             <form name="newlestter" className="d-flex flex-column flex-md-row w-100 justify-content-center" onSubmit={handleSubmit}>
-                <input type="email" id="email" name="email" className="py-2 px-3 mb-2 border-0 bg-dark-subtle text-dark" value = {email} onChange={(e)=>setEmail(e.target.value)} placeholder="E-mail Address" required />
-                <button type="submit" id="subscribebutton" className="btn btn-dark py-2 px-3 mb-2 rounded-0 text-nowrap">Get Notified</button>
+                <input type="email" id="email" name="email" className="py-2 px-3 mb-2 border-0 rounded-pill rounded-end bg-dark-subtle text-dark" value = {email} onChange={(e)=>setEmail(e.target.value)} placeholder="E-mail Address" required />
+                <button type="submit" id="subscribebutton" className="btn btn-dark py-2 px-3 mb-2 rounded-pill rounded-start  text-nowrap">Get Notified</button>
             </form>
         </div>
     )

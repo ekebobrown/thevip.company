@@ -5,8 +5,6 @@ import styles from '@/app/page.module.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-import Copyright from "@/components/copyright";
-
 const default_font = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
@@ -22,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${default_font.className}`}>
         {children}
-        <Copyright/>
       </body>
     </html>
   );
